@@ -42,8 +42,8 @@ void test1(void) {
     initNodes(4);
     link(&nodes[0], &nodes[3], &nodes[1]);
     link(&nodes[1], &nodes[3], &nodes[2]);
-    link(&nodes[2], &nodes[3], NULL);
-    link(&nodes[3], NULL, &nodes[0]);
+    link(&nodes[2], &nodes[0], NULL);
+    link(&nodes[3], NULL, &nodes[2]);
     dfs(&nodes[0]); /* ノード 0 から探索 */
 }
 
