@@ -191,8 +191,8 @@ int main(int argc, char* argv[]) {
     struct {
         char * in, * ans;
     } filepairs[] = 
-    /*{ {"sample", "sample.ans"}, { "B1", "B1.ans"}}; */
-    { {"kadai2/sample", "kadai2/sample.ans"}, { "kadai2/B1", "kadai2/B1.ans"}};
+    /*{ {"sample.in", "sample.ans"}, { "B1.in", "B1.ans"}}; */
+    { {"kadai2/sample.in", "kadai2/sample.ans"}, { "kadai2/B1.in", "kadai2/B1.ans"}};
 
     int i;
     for(i=0; i<2; i++) {
@@ -226,9 +226,9 @@ int main(int argc, char* argv[]) {
             totalCount++;
         }
         if(failCount==0) {
-            printf("!! Congratulation! You passed all data (%d) in %s!\n", totalCount, inFile);
+            printf("!! Congratulations! You passed all data (%d) in %s!\n", totalCount, inFile);
         } else {
-            printf("! Im sorry you missed %d/%d in %s!\n", failCount, totalCount, inFile);
+            printf("! I'm sorry you missed %d/%d in %s!\n", failCount, totalCount, inFile);
             return 0;
         }
     }
