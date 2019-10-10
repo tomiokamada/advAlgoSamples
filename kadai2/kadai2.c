@@ -188,6 +188,11 @@ int solve(int w, int h) {
  */
 int main(int argc, char* argv[]) {
     
+    /* 以下は、入力＆正解ファイルの指定。
+     * 入力ファイルが kadai2 directory にある想定＆"/"で directory 構成
+     * を示す想定(Mac や Unix, MinGWなど)になっています。
+     * 環境によって変更してください。
+     */ 
     struct {
         char * in, * ans;
     } filepairs[] = 
