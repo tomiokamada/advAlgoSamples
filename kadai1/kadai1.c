@@ -11,6 +11,7 @@ typedef struct node {
 
 void printNode(node_tp node) {
     printf("(%d, %d)\n", node->id, node->visited);
+    fflush(stdout);
 }
 
 node_t nodes[BUFSIZE]; /* 大域変数（配列） */
