@@ -179,7 +179,7 @@ double solve(int n) {
         /* ↓　複数のパスから同一ノードにたどり着く
            ケースがあるので、既に訪問済みか確認 */      
         if(cost[here.index] < here.pathLen) continue;
-        cost[here.index] = here.pathLen;
+        assert(cost[here.index] == here.pathLen);
         if(here.index == n-1) break;
         for(j=1; j<n; j++) { /* １ステップで到達できる点を探す */
             if(here.index == j) continue;
