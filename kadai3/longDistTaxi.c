@@ -21,7 +21,7 @@ typedef struct roadInfo {
   struct {
     int dest;
     int dist;
-  } roads[MAX_N_CITIES];
+  } roads[MAX_N_ROADS];
 } roadinfo_t, *roadinfo_tp;
 roadinfo_t roadinfo[MAX_N_CITIES];
 
