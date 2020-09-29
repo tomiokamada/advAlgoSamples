@@ -39,7 +39,7 @@ void dfs(node_tp node) {
     }
 }
 
-void test1(void) {
+void test1(void) { /* 2020 version */
     initNodes(4);
     link(&nodes[0], &nodes[3], &nodes[1]);
     link(&nodes[1], &nodes[3], &nodes[2]);
