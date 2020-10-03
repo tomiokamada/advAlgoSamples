@@ -194,15 +194,15 @@ int main(int argc, char* argv[]) {
      * 環境によって変更してください。
      */ 
     struct {
-        char * in, * ans;
+        const char * in, * ans;
     } filepairs[] = 
     /*{ {"sample.in", "sample.ans"}, { "B1.in", "B1.ans"}}; */
     { {"kadai2/sample.in", "kadai2/sample.ans"}, { "kadai2/B1.in", "kadai2/B1.ans"}};
 
     int i;
     for(i=0; i<2; i++) {
-        char* inFile = filepairs[i].in;
-        char* ansFile = filepairs[i].ans;
+        const char* inFile = filepairs[i].in;
+        const char* ansFile = filepairs[i].ans;
         FILE * in = fopen(inFile, "r");
         FILE * ansIn = fopen(ansFile, "r");
         if(in==NULL) {
