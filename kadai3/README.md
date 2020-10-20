@@ -1,6 +1,8 @@
 
 # 課題３
 
+（準備中）
+
 ## 概要
 
 [ACM ICPC 2005年 D　問題](https://icpc.iisf.or.jp/past-icpc/domestic2005/D/D_ja.html) を簡単にした問題を解いてみましょう。
