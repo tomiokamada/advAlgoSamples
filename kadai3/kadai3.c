@@ -159,6 +159,7 @@ int compare(searchNode_tp a, searchNode_tp b) {
  */
 
 priorityQ_t Q;
+// TODO 必要な大域変数があったら、作成しましょう。
 
 /**********************
  * 入力： `n(Tickets)`, `m(Cities)`, `p(Paths)` は問題のとおり。
@@ -191,7 +192,6 @@ int main(void) {
     } filepairs[] =
         { {"kadai3/sample.in", "kadai3/sampleE.ans", "kadai3/sample.ans"},
           {"kadai3/D1.in", "kadai3/D1E.ans", "kadai3/D1.ans"}}; 
-//        {{"kadai3/sample.in", "kadai3/sample.ans"}, {"kadai2/D1.in", "kadai2/D1.ans"}};
 
     for (int i = 0; i < 2; i++){
         const char *inFile = filepairs[i].in;
@@ -215,16 +215,7 @@ int main(void) {
             if(n==0) break;
             setupBoard(in, n, m, p);
             result = solve(n, m, p, a-1, b-1);
-/*
-            if (result == INF)
-            {
-                printf("Impossible\n");
-            }
-            else
-            {
-                printf("%f\n", result);
-            }
-*/
+
             char strAns[100];
             fscanf(ansIn, "%s", strAns);
             if (strcmp(strAns, "Impossible")==0) {
