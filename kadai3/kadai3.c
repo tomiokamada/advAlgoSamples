@@ -9,8 +9,7 @@
  * 問題情報
  */
 
-#define NOPATH INT_MAX
-#define INF DBL_MAX
+#define INF INT_MAX
 #define MAX_CITY 30
 #define MAX_TICKETS 8
 
@@ -21,7 +20,7 @@ int road[MAX_CITY][MAX_CITY];
 void setupBoard(FILE * in, int n, int m, int p) {
     for(int i=0; i< m; i++) {
         for (int j = 0; j < m; j++) {
-            road[i][j] = NOPATH;
+            road[i][j] = INF;
         }
     }
     for (int i = 0; i < n; i++) {
@@ -38,23 +37,22 @@ void setupBoard(FILE * in, int n, int m, int p) {
 }
 
 /************************************************
- * 探索ノード (準備済み)
+ * 探索ノード (準備済み、必要に応じて改変可)
  */
 
 typedef struct searchNode {
     double time; /* 対象都市までの経路長 */
-    int used;  /* 利用チケット数 */
     int city; /* 対象都市 */
-} searchNode_t, * searchNode_tp;
+    int used;  /* 利用チケット数 */
+} searchNode_t, *searchNode_tp;
 
 void printElem(searchNode_tp elem) {
-    printf("(time: %f, used %d, city %d)\n", elem->time, elem->used, elem->city);
+    printf("(time: %f, city %d, used %d)\n", elem->time, elem->city, elem->used);
 }
 
 /***********************************************
  * priority queue (汎用のつもり)
  */
-
 #define BUFSIZE 10000
 /* ELEM は要素の型を表す。利用用途に合わせて型名を変えてください
  * ちなみに、今回は searchNode_t を利用 */
@@ -149,8 +147,8 @@ void printQueueInside(priorityQ_tp p) {
  */
 int compare(searchNode_tp a, searchNode_tp b) {
     /* a, b の順でよければ 負の値 */
-    if (a->time < b->time) return -1;
-    if (a->time == b->time) return 0;
+    if(a->time < b->time) return -1;
+    if(a->time == b->time) return 0;
     return 1;
 }
 
@@ -173,7 +171,7 @@ priorityQ_t Q;
  */
 double solve(int nTickets, int mCities, int pPaths, int a, int b) {
     reset(&Q);
-    searchNode_t start = { 0.0, 0, a };
+    searchNode_t start = { 0.0, a, 0 };
     enqueue(&Q, start);
  
     while(qSize(&Q) > 0) {
