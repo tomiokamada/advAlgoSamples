@@ -39,12 +39,12 @@ void dfs(node_tp node) {
     }
 }
 
-void test1(void) { /* 2020 version */
+void test1(void) { /* 2021 version */
     initNodes(4);
-    link(&nodes[0], &nodes[3], &nodes[1]);
-    link(&nodes[1], &nodes[3], &nodes[2]);
-    link(&nodes[2], NULL, NULL);
-    link(&nodes[3], &nodes[0], &nodes[2]);
+    link(&nodes[0], &nodes[2], &nodes[1]);
+    link(&nodes[1], &nodes[2], &nodes[3]);
+    link(&nodes[2], NULL, &nodes[3]);
+    link(&nodes[3], &nodes[0], NULL);
     dfs(&nodes[0]); /* ノード 0 から探索 */
 }
 
@@ -58,6 +58,6 @@ void test2(void) {
 
 int main(void)  {
     test1();
-    /* test2(); */
+    test2(); 
     return 0;
 }
