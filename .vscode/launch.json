@@ -6,11 +6,9 @@
         {
             "type": "gdb",
             "request": "launch",
-            "name": "Debug (GDB)",
+            "name": "gdb launch",
             "preLaunchTask": "build gcc",
-            "target": "${fileDirname}/${fileBasenameNoExtension}",
-            "cwd": "${workspaceRoot}",
-            "valuesFormatting": "parseText"
+            "program": "${fileDirname}/${fileBasenameNoExtension}"
         }
     ]
 }
