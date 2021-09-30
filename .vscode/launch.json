@@ -1,4 +1,3 @@
-{
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     "version": "0.2.0",
@@ -6,11 +5,9 @@
         {
             "type": "gdb",
             "request": "launch",
-            "name": "Debug (GDB)",
+            "name": "gdb launch",
             "preLaunchTask": "build gcc",
-            "target": "${fileDirname}/${fileBasenameNoExtension}",
-            "cwd": "${workspaceRoot}",
-            "valuesFormatting": "parseText"
+            "program": "${fileDirname}/${fileBasenameNoExtension}"
         }
     ]
 }

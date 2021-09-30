@@ -1,5 +1,4 @@
 
 vscode:
   extensions:
-    - webfreak.debug
-    - vadimcn.vscode-lldb
+    - eclipse-cdt.cdt-gdb-vscode
