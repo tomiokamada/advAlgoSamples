@@ -6,6 +6,8 @@
             "type": "gdb",
             "request": "launch",
             "name": "gdb launch",
+            "openGdbConsole": true,
+            "initCommands": [ "break main" ],
             "preLaunchTask": "build gcc",
             "program": "${fileDirname}/${fileBasenameNoExtension}"
         }
