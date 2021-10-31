@@ -71,8 +71,8 @@ double solve(int n, int t) {
 int main(int argc, char* argv[]) {
     struct {
         char * in, * ans;
-    } filepairs[] = { {"dp/sample.in", "dp/sample.ans"},
-                      { "dp/C.in", "dp/C.ans"}};
+    } filepairs[] = { {"sample.in", "sample.ans"},
+                      { "C.in", "C.ans"}};
 
     int i;
     for(i=0; i<2; i++) {
