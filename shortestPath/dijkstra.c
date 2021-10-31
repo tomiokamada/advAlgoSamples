@@ -200,8 +200,8 @@ double solve(int n) {
 
 
 int main(void) {
-    char* inFile = "shortestPath/sample.in";
-    char* ansFile = "shortestPath/sample.ans";
+    char* inFile = "sample.in";
+    char* ansFile = "sample.ans";
     FILE * in = fopen(inFile, "r");
     FILE * ansIn = fopen(ansFile, "r");
     if(in==NULL) {
