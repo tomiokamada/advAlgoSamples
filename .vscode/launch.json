@@ -8,6 +8,7 @@
             "request": "launch",
             "name": "gdb launch",
             "openGdbConsole": true,
+            "cwd": "${fileDirname}",
             "internalConsoleOptions": "neverOpen",
             "initCommands": [ "break main" ],
             "preLaunchTask": "build gcc",
